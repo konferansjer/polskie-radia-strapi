@@ -1,0 +1,55 @@
+{
+  "connection": "default",
+  "collectionName": "radios",
+  "info": {
+    "name": "radio",
+    "description": "Radia internetowe i stacje naziemne"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "comment": ""
+  },
+  "attributes": {
+    "name": {
+      "default": "",
+      "type": "string"
+    },
+    "streamUrl": {
+      "default": "",
+      "type": "string"
+    },
+    "imageUrl": {
+      "default": "",
+      "type": "string"
+    },
+    "desc": {
+      "default": "",
+      "type": "string"
+    },
+    "frequency": {
+      "default": "",
+      "type": "string"
+    },
+    "city": {
+      "default": "",
+      "type": "string"
+    },
+    "regon": {
+      "default": "",
+      "type": "string"
+    },
+    "type": {
+      "default": "",
+      "type": "enumeration",
+      "enum": [
+        "FM",
+        "ONLINE"
+      ]
+    },
+    "reports": {
+      "collection": "report",
+      "via": "radio"
+    }
+  }
+}

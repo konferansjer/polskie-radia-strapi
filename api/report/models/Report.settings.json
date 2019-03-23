@@ -1,0 +1,36 @@
+{
+  "connection": "default",
+  "collectionName": "reports",
+  "info": {
+    "name": "report",
+    "description": "Problem with radios reports"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "comment": ""
+  },
+  "attributes": {
+    "type": {
+      "default": "",
+      "type": "string"
+    },
+    "status": {
+      "default": "",
+      "type": "enumeration",
+      "enum": [
+        "NEW",
+        "FINISHED"
+      ]
+    },
+    "radio": {
+      "model": "radio",
+      "via": "reports"
+    },
+    "user": {
+      "model": "user",
+      "via": "reports",
+      "plugin": "users-permissions"
+    }
+  }
+}
